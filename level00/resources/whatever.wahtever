@@ -1,0 +1,10 @@
+J'ai chercher dans le user un fichier situer a un endroit anormal
+
+J'ai trouver le fichier jhon dans le /usr/sbin
+
+Dans ce fichier j'ai trouver un code : cdiiddwpgswtgt
+
+J'ai decripter ce code avec le site https://www.dcode.fr/chiffre-rot
+ce qui ma donne le pwd du usr flag00
+
+Depuis le usr flag00 j'ai exec la cmd getflag ce qui ma donne le flag pour le level01

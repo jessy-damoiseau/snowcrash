@@ -1,0 +1,10 @@
+level04.pl est un fichier perl executable sur un nvigateur
+dans le fichier on trouve dans un commantaire 'localhost:4747'
+
+ce qui indique qu'on peut execute URL http://localhost:4747/level04.pl depuis la VM
+
+ou encore pour recuperer le flag executer URL 
+
+http://X.X.X.X:4747/level04.pl?x=$(getflag) depuis le navigateur de l'ordinateur
+
+X.X.X.X = ip machine
