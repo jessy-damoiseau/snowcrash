@@ -5,4 +5,4 @@ dans le .php on a la ligne $a = preg_replace("/(\[x (.*)\])/e", "y(\"\\2\")", $a
 
 le 1er arg de la fonction preg_replace est "/(\[x (.*)\])/e"
 
-le /e dans cette arg permet d'interpreter la string comme une commande donc pour exec getflag il sufit de passer cette string : [x {exec(getflag)}]
+le /e dans cette arg permet d'interpreter la string comme une commande donc pour exec getflag il sufit de passer cette string : [x {${exec(getflag)}}]
