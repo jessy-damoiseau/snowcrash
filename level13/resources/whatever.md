@@ -1,12 +1,15 @@
 
-# Flag : 2A31L79asukciNyi8uppkEuSx
+# Level13
 
-On trouve dans le home un fichier executable.
+---
 
-En le recuperant et decompilant, on observe une chaine de charactere en dur qui a l'air de passer dasn une fonction "ft_des" qui la dechiffre.
-Il suffit de simple;ent copier cette partie ainsi que le flag encrypter en local pour obtenir le flag.
+- On trouve dans le home un fichier executable.
 
+- En le recuperant et decompilant, on observe une chaine de charactere en dur qui  passe dans une fonction "ft_des" qui la dechiffre.
 
+- On copie le flag encrypter en local pour obtenir le flag decrypte.
+
+```c
 #include <stdio.h>
 #include <string.h>
 
@@ -77,3 +80,4 @@ int main()
 	printf("%s", ft_des("boe]!ai0FB@.:|L6l@A?>qJ}I"));
 	return 0;
 }
+```

