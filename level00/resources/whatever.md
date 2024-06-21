@@ -6,7 +6,14 @@
 - On observe aucun fichier dans le home du user actuel, donc on recherche un si un fichier anormal est present.
 
 
-- On trouve un ficher texte nomme "jhon" sur le chemin /usr/bin/john
+- On utilise la commande bash
+
+
+```bash
+find / -user flag00 2>/dev/null
+```
+
+- On trouve un ficher texte nomme "john" sur le chemin /usr/sbin/john
 
 
 - En l'ouvrant avec la commande "cat", on obtient le texte suivant :
@@ -14,7 +21,7 @@
 
 
 - On peut ensuite decrypter ce code avec les outils suivants:
-	- [DCode](https://www.dcode.fr/identification-chiffrement)
+	- [DCode](https://www.dcode.fr/chiffre-rot)
 	- [CyberChef](https://gchq.github.io/CyberChef/)
 
 - En applicant une rotation de  11 caracteres, on obtient le code suivant :
